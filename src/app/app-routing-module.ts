@@ -6,6 +6,8 @@ import { CreateAppointment } from './create-appointment/create-appointment';
 import { HomePage } from './home-page/home-page';
 import { DocDash } from './doc-dash/doc-dash';
 import { CreatePatient } from './create-patient/create-patient';
+import { MedicineList } from './medicine-list/medicine-list';
+import { CreateMedicine } from './create-medicine/create-medicine';
 
 const routes: Routes = [
   {path: "admin", component: Admindash},
@@ -14,7 +16,9 @@ const routes: Routes = [
   {path: "home", component: HomePage},
   {path: "", redirectTo: "home", pathMatch: "full"},
   {path: "doc-dash", component: DocDash},
-  {path:"create-patient", component: CreatePatient}
+  {path:"create-patient", component: CreatePatient},
+  {path:"medicine-list", component: MedicineList},
+  {path: "add-medicine", component: CreateMedicine}
 ];
 
 @NgModule({
