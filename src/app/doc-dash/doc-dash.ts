@@ -3,12 +3,13 @@ import { Patient } from '../patient';
 import { PatientService } from '../patient.service';
 
 @Component({
-  selector: 'app-admindash',
+  selector: 'app-doc-dash',
   standalone: false,
-  templateUrl: './admindash.html',
-  styleUrl: './admindash.css',
+  templateUrl: './doc-dash.html',
+  styleUrl: './doc-dash.css',
 })
-export class Admindash {
+export class DocDash {
+
   patients: Patient[] = [];
   loading = true;
   error = '';
@@ -38,13 +39,6 @@ export class Admindash {
         this.error = 'Failed to load patients.';
         this.loading = false;
       }
-    });
-  }
-
-  delete(id: number) {
-    this.patientService.deletePatient(id).subscribe(() => {
-      this.patients = this.patients.filter(patient => patient.id !== id);
-      this.getPatients();
     });
   }
 

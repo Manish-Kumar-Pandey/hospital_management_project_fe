@@ -18,4 +18,8 @@ export class AppointmentService {
   createAppointment(appointment: AppointmentModel): Observable<Object>{
     return this.httpClient.post(`${this.baseUrl}/insert`, appointment);
   }
+
+  deleteAppointment(id: number): Observable<Object> {
+    return this.httpClient.delete(`${this.baseUrl}/appointment/${id}`);
+  }
 }

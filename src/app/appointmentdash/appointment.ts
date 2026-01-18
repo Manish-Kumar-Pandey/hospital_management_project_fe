@@ -30,4 +30,11 @@ export class Appointment {
       console.log('Appointments after set:', this.appointments);
     })
   }
+
+  delete(id: number) {
+    this.appointmentService.deleteAppointment(id).subscribe(() => {
+      this.appointments = this.appointments.filter(appointment => appointment.id !== id);
+      this.getAppointments();
+    }); 
+  }
 }

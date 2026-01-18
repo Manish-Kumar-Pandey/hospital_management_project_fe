@@ -1,0 +1,119 @@
+<nav style="margin: auto" class="navbar navbar-expand-lg bg-dark">
+  <a style="color: white" class="navbar-brand" href="#">DNYANOBA HOSPITALS</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a
+          style="color: white"
+          class="nav-link active"
+          aria-current="page"
+          href="javascript:void(0);"
+          routerLink="/doc-dash"
+          >Back</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+    <h2 class="text-center">Create Patient</h2>
+    <form (ngSubmit)="onSubmit()" #patientForm="ngForm">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input
+                type="text"
+                id="name"
+                class="form-control"
+                required
+                [(ngModel)]="patient.name"
+                name="name"
+                #name="ngModel"
+            />
+        </div>
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input
+                type="number"
+                id="age"
+                class="form-control"
+                required
+                [(ngModel)]="patient.age"
+                name="age"
+                #age="ngModel"
+            />
+        </div>
+        <div class="form-group">
+            <label for="dose">Dose:</label>
+            <input
+                type="text"
+                id="dose"
+                class="form-control"
+                required
+                [(ngModel)]="patient.dose"
+                name="dose"
+                #dose="ngModel"
+            />
+        </div>
+        <div class="form-group">
+            <label for="prescription">Prescription:</label>
+            <input
+                type="text"
+                id="prescription"
+                class="form-control"
+                required
+                [(ngModel)]="patient.prescription"
+                name="prescription"
+                #prescription="ngModel"
+            />
+        </div>
+        <div class="form-group">
+            <label for="fees">Fees:</label>
+            <input
+                type="text"
+                id="fees"
+                class="form-control"
+                required
+                [(ngModel)]="patient.fees"
+                name="fees"
+                #fees="ngModel"
+            />
+        </div>
+        <div class="form-group">
+            <label for="blood_group">Blood Group:</label>
+            <input
+                type="text"
+                id="blood_group"
+                class="form-control"
+                required
+                [(ngModel)]="patient.blood_group"
+                name="blood_group"
+                #blood_group="ngModel"
+            />
+        </div>
+        <div class="form-group">
+            <label for="urgency">Urgency:</label>
+            <input
+                type="text"
+                id="urgency"
+                class="form-control"
+                required
+                [(ngModel)]="patient.urgency"
+                name="urgency"
+                #urgency="ngModel"
+            />
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary" [disabled]="patientForm.invalid">Create Patient</button>
+    </form>
+</div>

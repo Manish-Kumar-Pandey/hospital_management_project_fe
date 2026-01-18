@@ -8,13 +8,19 @@ import { provideHttpClient } from '@angular/common/http';
 import { Appointment } from './appointmentdash/appointment';
 import { CreateAppointment } from './create-appointment/create-appointment';
 import { FormsModule } from '@angular/forms';
+import { HomePage } from './home-page/home-page';
+import { DocDash } from './doc-dash/doc-dash';
+import { CreatePatient } from './create-patient/create-patient';
 
 @NgModule({
   declarations: [
     App,
     Admindash,
     Appointment,
-    CreateAppointment
+    CreateAppointment,
+    HomePage,
+    DocDash,
+    CreatePatient
   ],
   imports: [
     BrowserModule,
